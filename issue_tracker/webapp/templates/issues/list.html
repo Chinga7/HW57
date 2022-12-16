@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:project_list' %}">Home</a>
+    </li>
+
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Issues</h1>
+        {% for issue in issues %}
+             {% include 'partial/issue_cards.html' %}
+        {% endfor %}
+        <p></p>
+
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+{% endblock %}

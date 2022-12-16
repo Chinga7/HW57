@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block navbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:project_list' %}">Home</a>
+    </li>
+{% endblock %}
+
+{% block title %}Delete Project{% endblock %}
+
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1 class="d-flex justify-content-center">Are you sure want to delete project: {{project.title}}?</h1>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <input class="btn btn-danger" type="submit" value="Delete">
+            <a href="{% url 'webapp:project_list' %}" class="btn btn-primary">Cancel</a>
+        </div>
+    </form>
+
+{% endblock %}

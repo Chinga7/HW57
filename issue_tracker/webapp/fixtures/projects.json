@@ -1,0 +1,237 @@
+[
+{
+  "model": "webapp.project",
+  "pk": 1,
+  "fields": {
+    "start_date": "2022-12-06",
+    "end_date": "2022-12-16",
+    "title": "Create to do list",
+    "description": "Create"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 2,
+  "fields": {
+    "start_date": "2022-12-10",
+    "end_date": "2022-12-18",
+    "title": "Install equipment",
+    "description": "Swap new equipment"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 3,
+  "fields": {
+    "start_date": "2022-12-12",
+    "end_date": "2022-12-20",
+    "title": "Equipment dismantling",
+    "description": "Cisco"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 4,
+  "fields": {
+    "start_date": "2022-12-15",
+    "end_date": "2022-12-25",
+    "title": "Purchase of equipment",
+    "description": "Network expansion"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 5,
+  "fields": {
+    "start_date": "2022-12-18",
+    "end_date": "2022-12-28",
+    "title": "Repair of equipment",
+    "description": "Repair"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 1,
+  "fields": {
+    "summary": "Error detail",
+    "description": "Big error",
+    "status": 1,
+    "project": 1,
+    "updated_at": "2022-12-08T09:33:18.482Z",
+    "created_at": "2022-12-08T09:33:18.482Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 2,
+  "fields": {
+    "summary": "Delivery to warehouse",
+    "description": "Document preparation",
+    "status": 1,
+    "project": 3,
+    "updated_at": "2022-12-08T09:45:11.997Z",
+    "created_at": "2022-12-08T09:45:11.997Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 3,
+  "fields": {
+    "summary": "Diagnostics",
+    "description": "Cause of occurrence",
+    "status": 1,
+    "project": 5,
+    "updated_at": "2022-12-08T10:29:49.837Z",
+    "created_at": "2022-12-08T10:29:49.837Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 4,
+  "fields": {
+    "summary": "Spare part replacement",
+    "description": "Search and purchase of spare parts",
+    "status": 2,
+    "project": 5,
+    "updated_at": "2022-12-08T10:32:30.065Z",
+    "created_at": "2022-12-08T10:32:30.065Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 5,
+  "fields": {
+    "summary": "Software",
+    "description": "Upgrade software",
+    "status": 2,
+    "project": 5,
+    "updated_at": "2022-12-08T10:33:58.136Z",
+    "created_at": "2022-12-08T10:33:58.136Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 6,
+  "fields": {
+    "summary": "Guarantee",
+    "description": "Shipping to dealer",
+    "status": 2,
+    "project": 5,
+    "updated_at": "2022-12-08T10:37:11.301Z",
+    "created_at": "2022-12-08T10:37:11.301Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 7,
+  "fields": {
+    "summary": "Write-off act",
+    "description": "Not suitable for use",
+    "status": 3,
+    "project": 5,
+    "updated_at": "2022-12-08T10:38:57.236Z",
+    "created_at": "2022-12-08T10:38:57.236Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 8,
+  "fields": {
+    "summary": "Price request",
+    "description": "Contacting dealers",
+    "status": 1,
+    "project": 4,
+    "updated_at": "2022-12-08T10:41:56.122Z",
+    "created_at": "2022-12-08T10:41:56.122Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 9,
+  "fields": {
+    "summary": "Budget",
+    "description": "Allocation of funds",
+    "status": 3,
+    "project": 4,
+    "updated_at": "2022-12-08T10:44:44.157Z",
+    "created_at": "2022-12-08T10:44:44.157Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 10,
+  "fields": {
+    "summary": "Contract",
+    "description": "Contract preparation",
+    "status": 3,
+    "project": 4,
+    "updated_at": "2022-12-08T10:48:20.195Z",
+    "created_at": "2022-12-08T10:48:20.195Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 11,
+  "fields": {
+    "summary": "Process verification",
+    "description": "Check of steps",
+    "status": 2,
+    "project": 4,
+    "updated_at": "2022-12-08T10:51:09.556Z",
+    "created_at": "2022-12-08T10:51:09.556Z",
+    "type": []
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "status_name": "New"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "status_name": "In Progress"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "status_name": "Done"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "name": "Task"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "name": "Bug"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "name": "Enhancement"
+  }
+}
+]

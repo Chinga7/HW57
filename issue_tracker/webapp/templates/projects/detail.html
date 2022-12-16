@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:project_list' %}">Home</a>
+    </li>
+    {% if request.user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:create_issue' project.pk %}">Create Issue</a>
+    </li>
+    {% endif %}
+
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Project Details</h1>
+    {% include 'partial/project_card.html' %}
+
+    <h3> List of Isues <h3>
+
+    {% for issue in object_list %}
+         {% include 'partial/issue_cards.html' %}
+    {% endfor %}
+
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+
+{% endblock %}

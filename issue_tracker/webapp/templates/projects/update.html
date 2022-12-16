@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block navbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:project_list' %}">Home</a>
+    </li>
+{% endblock %}
+
+{% block title %}Update Project{% endblock %}
+
+{% block content %}
+    <h2>Update Project</h2>
+    <form action="" method="post">
+        {% include 'partial/form.html' with button_name='Update' %}
+    </form>
+
+{% endblock %}

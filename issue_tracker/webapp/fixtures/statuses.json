@@ -1,0 +1,23 @@
+[
+{
+    "model": "webapp.status",
+    "pk": 1,
+    "fields": {
+        "status_name": "New"
+    }
+},
+{
+    "model": "webapp.status",
+    "pk": 2,
+    "fields": {
+        "status_name": "In Progress"
+    }
+},
+{
+    "model": "webapp.status",
+    "pk": 3,
+    "fields": {
+        "status_name": "Done"
+    }
+}
+]

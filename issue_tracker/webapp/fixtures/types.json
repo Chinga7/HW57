@@ -1,0 +1,23 @@
+[
+{
+    "model": "webapp.type",
+    "pk": 1,
+    "fields": {
+        "name": "Task"
+    }
+},
+{
+    "model": "webapp.type",
+    "pk": 2,
+    "fields": {
+        "name": "Bug"
+    }
+},
+{
+    "model": "webapp.type",
+    "pk": 3,
+    "fields": {
+        "name": "Enhancement"
+    }
+}
+]

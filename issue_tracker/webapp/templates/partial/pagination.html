@@ -1,0 +1,50 @@
+<ul class="pagination">
+    {% if not page_obj.has_previous %}
+        <li class="page-item disabled">
+            <a class="page-link">Very beginning</a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link">Back</a>
+        </li>
+    {% else %}
+        <li class="page-item">
+            <a class="page-link" href="?{% if query %}{{ query }}&{% endif %}page=1">Very Beginning</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.previous_page_number }}">Back</a>
+        </li>
+        <li class="page-item"><a class="page-link"
+                                 href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+        </li>
+    {% endif %}
+
+    <li class="page-item active" aria-current="page">
+         <form method="get">
+             {% if search %}<input type="hidden" name="search" value="{{ search }}">{% endif %}
+            <input type="text" class="form-control" name="page" value="{{ page_obj.number }}">
+        </form>
+{#        <a class="page-link" href="#">{{ page_obj.number }}</a>#}
+    </li>
+
+    {% if not page_obj.has_next %}
+        <li class="page-item disabled">
+            <a class="page-link">Next</a>
+        </li>
+
+        <li class="page-item disabled">
+            <a class="page-link">Very End</a>
+
+        </li>
+    {% else %}
+        <li class="page-item"><a class="page-link"
+                                 href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
+        <li class="page-item">
+            <a class="page-link" href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.next_page_number }}">Next</a>
+
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.paginator.num_pages }}">Very End</a>
+
+        </li>
+    {% endif %}
+</ul>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:project_list' %}">Home</a>
+    </li>
+    {% if request.user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:update_issue'  issue.pk %}">Update</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:delete_issue'  issue.pk %}">Delete</a>
+    </li>
+    {% endif %}
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Issue Details</h1>
+    {% include 'partial/issue_card.html' with issue=issue %}
+{% endblock %}

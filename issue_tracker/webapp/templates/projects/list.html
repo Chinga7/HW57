@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:project_list' %}">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:issue_list' %}">All Issues</a>
+    </li>
+    {% if request.user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'webapp:create_project' %}">Create Project</a>
+    </li>
+    {% endif %}
+
+
+        {% include 'partial/search.html' %}
+
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Projects</h1>
+        {% for project in projects %}
+             {% include 'partial/project_cards.html' %}
+        {% endfor %}
+        <p></p>
+
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+{% endblock %}
